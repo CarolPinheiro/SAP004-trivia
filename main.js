@@ -19,7 +19,7 @@ if (desejaJogar == 1) {
         
     } else {
          let respostaErrada1 = document.getElementById("resposta-errada-1");
-        respostaErrada1.innerHTML += "Você errou a questão 1";
+        respostaErrada1.innerHTML += "<p>Você errou a questão 1</p>";
     }
 
     let segundaPergunta = parseInt(prompt("Segunda Pergunda: \n Quanto é 5*5? \n Digite número correspondente a sua escolha: \n 1. 40 \n 2. 60 \n 3. 25"));
@@ -29,17 +29,17 @@ if (desejaJogar == 1) {
         
     } else {
          let respostaErrada2 = document.getElementById("resposta-errada-1");
-        respostaErrada2.innerHTML += "Você errou a questão 2";
+        respostaErrada2.innerHTML += "<p>Você errou a questão 2</p>";
     }
      
     let terceiraPergunta = parseInt(prompt("Terceira Pergunda: \n Quanto é 9*9 ? \n Digite número correspondente a sua escolha: \n 1. 72 \n 2. 81 \n 3. 35"));
     if (terceiraPergunta === 2){
         let respostaCorreta3 = document.getElementById("resposta-correta-1");
-        respostaCorreta3.innerHTML += "Você acertou a questão 3";
+        respostaCorreta3.innerHTML += "<p>Você acertou a questão 3</p>";
         
     } else {
          let respostaErrada3 = document.getElementById("resposta-errada-1");
-        respostaErrada3.innerHTML += "Você errou a questão 3";
+        respostaErrada3.innerHTML += "<p>Você errou a questão 3</p>";
     }
      
 
