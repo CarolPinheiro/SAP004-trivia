@@ -1,4 +1,8 @@
 let nomeJogador = prompt("Insira seu nome:") ;
+while (nomeJogador== "") {
+    alert("Você precisa digitar um nome!")
+    nomeJogador = prompt("Insira seu nome:");
+}
 
 let name = document.getElementById("nome-jogador");
 
