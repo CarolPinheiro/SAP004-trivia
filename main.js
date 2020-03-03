@@ -1,6 +1,6 @@
 let playerName = prompt("Insira seu nome:") ;
 
-let name = document.getElementById("player-name");
+let name = document.getElementById("nome-jogador");
 
 name.innerHTML = "Bem vinda(o) " + playerName;
 
