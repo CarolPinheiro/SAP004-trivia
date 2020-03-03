@@ -1,0 +1,36 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.titulo {
+    font-size: 64px;
+    text-align: center;
+}
+.segundoTitulo {
+    font-size: 44px;
+    text-align: center;
+}
+
+.caixa {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.resposta-correta{
+    display: inline-block;
+    border: 2px solid black;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.resposta-errada {
+    display: inline-block;
+    border: 2px solid black;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    width: 30%;
+    box-sizing: border-box;
+}
