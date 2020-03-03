@@ -29,7 +29,7 @@ body{
     vertical-align: top;
     font-weight: bold;
     font-size: 26px;
-    height: auto;
+    height: 250px;
 	margin: 0 70px 0 auto;
 	padding: 30px 20px;
     border: 2px solid black;
@@ -44,7 +44,7 @@ body{
     font-size: 26px;
 	text-align: center;
     width: 300px;
-    height: auto;
+    height: 250px;
 	vertical-align: top;
 	margin: 0 auto 0 100px;
 	padding: 30px 20px;
