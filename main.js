@@ -1,8 +1,8 @@
-let playerName = prompt("Insira seu nome:") ;
+let nomeJogador = prompt("Insira seu nome:") ;
 
 let name = document.getElementById("nome-jogador");
 
-name.innerHTML = "Bem vinda(o) " + playerName;
+name.innerHTML = "Bem vinda(o) " + nomeJogador;
 
 let desejaJogar = prompt("Deseja jogar? \n Digite número correspondente a sua escolha: \n 1. Sim \n 2. Não");
 
@@ -42,9 +42,5 @@ if (desejaJogar == 1) {
 } else {
 
     let naoJogar = document.getElementById("nao-jogar");
-    name.innerHTML = "Obrigada por acessar o jogo " + playerName + "!";
+    name.innerHTML = "Obrigada por acessar o jogo " + nomeJogador + "!";
 }
-
-
-
-
