@@ -1,5 +1,9 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(#FEFEFE, #888888);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .titulo {
@@ -13,24 +17,38 @@ body{
 
 .caixa {
     width: 940px;
-    margin: 0 auto;
-    padding: 50px 0;
+	margin: 0 auto;
+	padding: 50px 0;
 }
 
 .resposta-correta{
     display: inline-block;
+    color: green;
+	text-align: center;
+	width: 300px;
+    vertical-align: top;
+    font-weight: bold;
+    font-size: 26px;
+    height: auto;
+	margin: 0 70px 0 auto;
+	padding: 30px 20px;
     border: 2px solid black;
-    margin: 0 1.5%;
-    padding: 30px 20px;
-    width: 30%;
-    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .resposta-errada {
     display: inline-block;
-    border: 2px solid black;
-    margin: 0 1.5%;
-    padding: 30px 20px;
-    width: 30%;
-    box-sizing: border-box;
+    color: red;
+    font-weight: bold;
+    font-size: 26px;
+	text-align: center;
+    width: 300px;
+    height: auto;
+	vertical-align: top;
+	margin: 0 auto 0 100px;
+	padding: 30px 20px;
+	border: 2px solid #000000;
+    border-radius: 10px;
+    background-color: white;
 }
