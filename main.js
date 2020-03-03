@@ -6,7 +6,7 @@ while (nomeJogador== "") {
 
 let name = document.getElementById("nome-jogador");
 
-name.innerHTML = "Bem vinda(o) " + nomeJogador;
+name.innerHTML = "Bem vinda(o) " + nomeJogador + "!";
 
 let desejaJogar = prompt("Deseja jogar? \n Digite número correspondente a sua escolha: \n 1. Sim \n 2. Não");
 
