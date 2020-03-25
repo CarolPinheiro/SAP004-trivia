@@ -80,21 +80,21 @@ checarHtml.addEventListener("click", function() {
         resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 1 está certa! </p>"
     }
     else  {
-        resultadoFinal.innerHTML += "<p> Resposta da questão 1 errada, tente novamente :D </p>"
+        resultadoFinal.innerHTML += "<p> Resposta da questão 1 está errada, tente novamente :D </p>"
     }
 
     if(document.getElementById("certa-22").checked) {
         resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 2 está certa! </p>"
     }
     else  {
-        resultadoFinal.innerHTML += "<p> Resposta da questão 2 errada, tente novamente :D </p>"
+        resultadoFinal.innerHTML += "<p> Resposta da questão 2 está errada, tente novamente :D </p>"
     }
 
     if(document.getElementById("certa-33").checked) {
         resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 3 está certa! </p>"
     }
     else  {
-        resultadoFinal.innerHTML += "<p> Resposta da questão  3errada, tente novamente :D </p>"
+        resultadoFinal.innerHTML += "<p> Resposta da questão  3 está errada, tente novamente :D </p>"
     }
         
 }); 
