@@ -1,89 +1,105 @@
-let nomeJogador = prompt("Insira seu nome:") ;
-while (nomeJogador== "") {
-    alert("Você precisa digitar um nome!")
-    nomeJogador = prompt("Insira seu nome:");
+function someDisplay (nome, aceitar,tema, matematica, html, final) {
+    document.getElementById("primeira-parte").style.display = nome;
+    document.getElementById("participar").style.display = aceitar;
+    document.getElementById("escolha-tema").style.display = tema;
+    document.getElementById("perguntas-matematica").style.display = matematica;
+    document.getElementById("perguntas-html").style.display = html;
+    document.getElementById("resultado-final").style.display = final;
 }
 
-let name = document.getElementById("nome-jogador");
 
-name.innerHTML = "Bem vinda(o) " + nomeJogador + "!";
-
-let desejaJogar = prompt("Deseja jogar? \n Digite número correspondente a sua escolha: \n 1. Sim \n 2. Não");
-
-if (desejaJogar == 1) {
-
-    let tema = parseInt(prompt("Você deseja realizar um questionário sobre qual tema? \n Digite o número correspondente a sua escolha: \n 1. Matemática \n 2.HTML"));
+let apresentacao = document.getElementById("ola-jogador")
+var comecar = document.getElementById("comecar");
+comecar.addEventListener("click", function() {
+    var nome = document.getElementById("nome").value;
+    apresentacao.innerHTML = "Seja bem vindo, " + nome + "!";
+    someDisplay ("none", "block", "none","none","none","none");
     
-    if (tema === 1){
+}); 
+ 
+var confirmar = document.getElementById("comecar-2");
+confirmar.addEventListener("click", function() {
+    if(document.getElementById("sim").checked) {
+        someDisplay ("none", "none", "block","none","none","none");
+    }
+    else {
+        alert ("opa blz vlw");
+        someDisplay("none","none","none","none","none","none");
+        apresentacao.style.display = "none";
+        document.getElementById("nao-quis-jogar").innerHTML = "Claro, " + nome + " muito obrigada por acessar nosso jogo!";
+    }
+}); 
 
-    let primeiraPergunta = parseInt(prompt("Primeira Pergunda: \n Quanto é 2+2? \n Digite número correspondente a sua escolha: \n 1. 4 \n 2. 6 \n 3. 0"));
-    if (primeiraPergunta === 1){
-        let respostaCorreta1 = document.getElementById("resposta-correta-1");
-        respostaCorreta1.innerHTML += "<p>Você acertou a questão 1</p>";
-        
-    } else {
-         let respostaErrada1 = document.getElementById("resposta-errada-1");
-        respostaErrada1.innerHTML += "<p>Você errou a questão 1</p>";
+
+let botaoMatematica = document.getElementById("botao-matematica");
+let botaoHtml = document.getElementById("botao-html");
+
+botaoMatematica.addEventListener("click", function () {
+    someDisplay ("none","none","none","block","none","none")});
+
+botaoHtml.addEventListener("click", function () {
+    someDisplay ("none","none","none","none","block","none")
+});
+
+
+
+let resultadoFinal = document.getElementById("resultado-final");
+
+
+var checar = document.getElementById("comecar-mat");
+checar.addEventListener("click", function() {       
+    someDisplay ("none","none","none","none","none","block"); 
+    if(document.getElementById("certa-1").checked) {
+        resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 1 está certa! </p>"
+    }
+    else  {
+        resultadoFinal.innerHTML += "<p> Resposta da questão 1 está errada, tente novamente :D </p>"
     }
 
-    let segundaPergunta = parseInt(prompt("Segunda Pergunda: \n Quanto é 5*5? \n Digite número correspondente a sua escolha: \n 1. 40 \n 2. 60 \n 3. 25"));
-    if (segundaPergunta === 3){
-        let respostaCorreta2 = document.getElementById("resposta-correta-1");
-        respostaCorreta2.innerHTML +=  "<p>Você acertou a questão 2</p>";
-        
-    } else {
-         let respostaErrada2 = document.getElementById("resposta-errada-1");
-        respostaErrada2.innerHTML += "<p>Você errou a questão 2</p>";
+    if(document.getElementById("certa-2").checked) {
+        resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 2 está certa! </p>"
     }
-     
-    let terceiraPergunta = parseInt(prompt("Terceira Pergunda: \n Quanto é 9*9 ? \n Digite número correspondente a sua escolha: \n 1. 72 \n 2. 81 \n 3. 35"));
-    if (terceiraPergunta === 2){
-        let respostaCorreta3 = document.getElementById("resposta-correta-1");
-        respostaCorreta3.innerHTML += "<p>Você acertou a questão 3</p>";
-        
-    } else {
-         let respostaErrada3 = document.getElementById("resposta-errada-1");
-        respostaErrada3.innerHTML += "<p>Você errou a questão 3</p>";
-    }
-}
-else {
-    let questao1 = parseInt(prompt("Primeira Pergunda: \n O que é Header? \n Digite número correspondente a sua escolha: \n 1. Cabeçalho \n 2. Corpo \n 3. Comida "));
-    if (questao1 === 1){
-        let respostaCorreta1 = document.getElementById("resposta-correta-1");
-        respostaCorreta1.innerHTML += "<p>Você acertou a questão 1</p>";
-        
-    } else {
-         let respostaErrada1 = document.getElementById("resposta-errada-1");
-        respostaErrada1.innerHTML += "<p>Você errou a questão 1</p>";
+    else  {
+        resultadoFinal.innerHTML += "<p> Respostada questão 2 está errada, tente novamente :D </p>"
     }
 
-    let questao2 = parseInt(prompt("Segunda Pergunda: \n O que é uma div? \n Digite número correspondente a sua escolha: \n 1. Uma tag de divisão \n 2. Discussão \n 3. Dividendo"));
-    if (questao2 === 1){
-        let respostaCorreta2 = document.getElementById("resposta-correta-1");
-        respostaCorreta2.innerHTML +=  "<p>Você acertou a questão 2</p>";
-        
-    } else {
-         let respostaErrada2 = document.getElementById("resposta-errada-1");
-        respostaErrada2.innerHTML += "<p>Você errou a questão 2</p>";
+    if(document.getElementById("certa-3").checked) {
+        resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 3 está certa! </p>"
     }
-     
-    let questao3 = parseInt(prompt("Terceira Pergunda: \n Pra que serve \\n ? \n Digite número correspondente a sua escolha: \n 1. Pular linha \n 2. Pular resposta \n 3. Parar"));
-    if (questao3 === 1){
-        let respostaCorreta3 = document.getElementById("resposta-correta-1");
-        respostaCorreta3.innerHTML += "<p>Você acertou a questão 3</p>";
+    else  {
+        resultadoFinal.innerHTML += "<p> Respostada questão 3 está errada, tente novamente :D </p>"
+    }
         
-    } else {
-         let respostaErrada3 = document.getElementById("resposta-errada-1");
-        respostaErrada3.innerHTML += "<p>Você errou a questão 3</p>";
+});
+;
+ 
+var checarHtml = document.getElementById("comecar-html");
+checarHtml.addEventListener("click", function() {  
+    someDisplay ("none","none","none","none","none","block");  
+    if(document.getElementById("certa-11").checked) {
+        resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 1 está certa! </p>"
+    }
+    else  {
+        resultadoFinal.innerHTML += "<p> Resposta da questão 1 errada, tente novamente :D </p>"
     }
 
+    if(document.getElementById("certa-22").checked) {
+        resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 2 está certa! </p>"
+    }
+    else  {
+        resultadoFinal.innerHTML += "<p> Resposta da questão 2 errada, tente novamente :D </p>"
+    }
 
+    if(document.getElementById("certa-33").checked) {
+        resultadoFinal.innerHTML += "<p> Parabéns, resposta da questão 3 está certa! </p>"
+    }
+    else  {
+        resultadoFinal.innerHTML += "<p> Resposta da questão  3errada, tente novamente :D </p>"
+    }
+        
+}); 
 
-
-}
-
-} else {
-
-    let naoJogar = document.getElementById("nao-jogar");
-    name.innerHTML = "Obrigada por acessar o jogo " + nomeJogador + "!";
-}
+var retornoBotao = document.getElementById("retorno-jogo");
+retornoBotao.addEventListener("click", function () { 
+    someDisplay ('none','none','block','none','none','none');
+})
