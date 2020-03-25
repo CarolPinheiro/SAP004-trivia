@@ -1,27 +1,138 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <link href="style.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>            
-            <nav class="titulo"> Show do Milhão!</nav>
-        </header>
-        <h1 id="nome-jogador" class="segundoTitulo"></h1>
-        <h2 id="nao-jogar" class="segundoTitulo"></h2>
-        <section class="caixa">
-        <span class="resposta-correta"> Respostas Corretas
-            <div id="resposta-correta-1"></div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="reset.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+    <title>Boas Vindas</title>
+</head>
+<body>
+    <img src="oie_transparent.png" class="imagem">
+    <form onsubmit="return false">
+    <p id="nao-quis-jogar"></p>
+    <div id="primeira-parte" style="display: block">
+        <label class="principal">Por favor digite seu nome: </br> <input type="text" id="nome" placeholder="Digite aqui seu nome"></label>
+        <button type="submit" id="comecar">Entrar</button>
+    </div>
+    <p id="ola-jogador"></p>
+    <div id="participar" style="display: none;" >
+        <h2 class="principal">Deseja jogar ou não?</h2>
+        <span class="caixa">
+        <label for="sim-ou-nao" class="permissao"> 
+            <input type="radio" id="sim" name="sim-ou-nao" checked> Sim
+        </label>
+        <label for="sim-ou-nao" class="permissao"> 
+            <input type="radio" id="nao" name="sim-ou-nao"> Nao
+        </label>
+        <button type="submit" id="comecar-2" class="permissao">Seguir</button>
+    </span>
+    </div> 
+    <div id="escolha-tema" style="display: none;">
+        <button type= "submit" id="botao-matematica"> Matemática</button>
+        <button type= "submit" id="botao-html"> HTML</button>
+
+    </div>
+    <div id="perguntas-matematica"  style="display: none;" > 
+        <span>
+        <h2>Primeira pergunta: <br> Quanto é 2+2?</h2>
+        <label for="respostas-1">
+            <input type="radio" id="certa-1" name="respostas-1"> 4
+        </label>
+        <label for="respostas-1">
+            <input type="radio" id="errada-1" name="respostas-1"> 0
+        </label>
+        <label for="respostas-1">
+            <input type="radio" id="errada-2" name="respostas-1"> 15
+        </label>
+        <h3 id="resultado-1"></h3>
         </span>
 
-        <span class="resposta-errada"> Respostas Erradas
-            <div id="resposta-errada-1"></div>
+        <span>
+        <h2>Segunda pergunta: <br> Quanto é 20 + 30?</h2>
+        <label for="respostas-2">
+            <input type="radio" id="errada-3" name="respostas-2"> 34
+        </label>
+        <label for="respostas-2">
+            <input type="radio" id="certa-2" name="respostas-2"> 50
+        </label>
+        <label for="respostas-2">
+            <input type="radio" id="errada-4" name="respostas-2"> 40
+        </label>
+        <h3 id="resultado-2"></h3>
         </span>
-        </section>
-        <script src="main.js"> </script>
 
-        
+        <span>
+        <h2>Terceira pergunta: <br> Quanto é 5 x 10?</h2>
+        <label for="respostas-3">
+            <input type="radio" id="errada-5" name="respostas-3"> 70
+        </label>
+        <label for="respostas-3">
+            <input type="radio" id="errada-6" name="respostas-3"> 25
+        </label>
+        <label for="respostas-3">
+            <input type="radio" id="certa-3" name="respostas-3"> 50
+        </label>
+        <h3 id="resultado-3"></h3>
+        </span>
 
-    </body>
+        <button type="submit" id="comecar-mat">Conferir as Respostas</button>
+    </div>
+
+    <div id="perguntas-html" style="display: none;" > 
+        <span id="teste">
+        <h2>Primeira pergunta: <br> Pra que serve /n?</h2>
+        <label for="respostas-1">
+            <input type="radio" id="certa-11" name="respostas-1"> Pular linha
+        </label>
+        <label for="respostas-1">
+            <input type="radio" name="respostas-1"> Centralizar texto
+        </label>
+        <label for="respostas-1">
+            <input type="radio" name="respostas-1"> Sublinhar
+        </label>
+        <h3 id="resultado-11"></h3>
+        </span>
+
+        <span>
+        <h2>Segunda pergunta: <br> O que é uma header?</h2>
+        <label for="respostas-2">
+            <input type="radio" id="certa-22" name="respostas-2"> Uma tag de cabeçalho
+        </label>
+        <label for="respostas-2">
+            <input type="radio"  name="respostas-2"> Uma tag de informação
+        </label>
+        <label for="respostas-2">
+            <input type="radio" name="respostas-2"> Uma tag de link
+        </label>
+        <h3 id="resultado-22"></h3>
+        </span>
+
+        <span>
+        <h2>Terceira pergunta: <br> O que é um footer?</h2>
+        <label for="respostas-3">
+            <input type="radio" id="certa-33" name="respostas-3"> Rodapé
+        </label>
+        <label for="respostas-3">
+            <input type="radio"  name="respostas-3"> Cabeçalho
+        </label>
+        <label for="respostas-3">
+            <input type="radio" name="respostas-3"> N/A
+        </label>
+        <h3 id="resultado-33"></h3>
+        </span> 
+
+        <button type="submit" id="comecar-html">Conferir as Respostas</button>
+    </div>
+    
+    <div class="respostas" id="resultado-final" style="display: none;">
+        <button id="retorno-jogo" > Jogar novamente</button>
+    </div>
+
+    </form>
+    
+ <script src="boasvindas.js"></script>
+</body>
 </html>
