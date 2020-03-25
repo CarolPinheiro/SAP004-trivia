@@ -1,54 +1,118 @@
 body{
     font-family: 'Montserrat', sans-serif;
-    background-image: linear-gradient(#FEFEFE, #888888);
+    background-image: linear-gradient(#FEFEFE, #fffc68);
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
-.titulo {
-    font-size: 64px;
+img {
+    width: 700px;
+    margin: 20px 320px;
+}
+
+.principal {
+    font-size: 22pt;
     text-align: center;
 }
-.segundoTitulo {
-    font-size: 44px;
-    text-align: center;
+
+#primeira-parte {
+    margin: 0px 480px;
+}
+
+#nome {
+    width: 80%;
+    height: 22px;
+    border: 2px solid rgb(121, 107, 118);
+    border-radius: 6px;
+}
+
+button {
+    border: 1px solid white;
+    border-radius: 6px;
+    color: black;   
+    font-weight: bold;
+    background-color: #FEFEFE;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 65);
+    color: white;
+    font-weight: bold;
+}
+
+button:active {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+#comecar{
+    height: 30px;
+    width: 15%;
+}
+
+#ola-jogador {
+    margin: auto 601px;
+    font-size: 18pt;
+}
+
+.permissao {
+    float: left;
 }
 
 .caixa {
-    width: 940px;
-	margin: 0 auto;
-	padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
 }
 
-.resposta-correta{
-    display: inline-block;
-    color: green;
-	text-align: center;
-	width: 300px;
-    vertical-align: top;
-    font-weight: bold;
-    font-size: 26px;
-    height: 300px;
-	margin: 0 70px 0 auto;
-	padding: 30px 20px;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: white;
+#comecar-2 {
+    margin-left: 10px;
 }
 
-.resposta-errada {
-    display: inline-block;
-    color: red;
+#escolha-tema {
+    margin: 30px 462px;
+}
+
+#botao-matematica, #botao-html {
+    height: 100px;
+    width: 200px;
+    margin-left: 10px;
+}
+
+#perguntas-matematica {
+    margin: 0 500px;
+    line-height: 1.5;
+    font-size: 18pt;
+    text-align: center;
     font-weight: bold;
-    font-size: 26px;
-	text-align: center;
-    width: 300px;
-    height: 300px;
-	vertical-align: top;
-	margin: 0 auto 0 100px;
-	padding: 30px 20px;
-	border: 2px solid #000000;
-    border-radius: 10px;
-    background-color: white;
+}
+
+#perguntas-html {
+    margin: 0 200px;
+    line-height: 1.5;
+    font-size: 18pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+#comecar-html, #comecar-mat {
+    height: 40px;
+    margin-top: 10px;
+}
+
+#resultado-final {
+    margin: 20px 403px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 40%;
+    line-height: 1.5;
+}
+
+#retorno-jogo {
+    width: 148px;
+    height: 30px;
+    margin-top: 30px;
 }
